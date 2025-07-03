@@ -1,0 +1,1 @@
+export const BASE_URL = "https://econverse-test-api.vercel.app/products"

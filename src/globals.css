@@ -1,0 +1,33 @@
+@layer base, components, utilities;
+
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #f7ca11;
+  --color-gray: #9f9f9f;
+  --color-blue: #3442b5;
+  --color-border: #f0f0f0;
+  --color-light-gray: #f4f4f4;
+  --color-violet: #271c47;
+}
+
+@custom-variant dark (&:is(.dark *));
+
+@layer base {
+  * {
+    font-family: "Poppins";
+  }
+
+  .line {
+    @apply bg-gray/30 w-[90%] h-px;
+  }
+
+  .newslatter-form {
+    & input:not([type="checkbox"]) {
+      @apply bg-white outline-none p-3 text-sm h-[42px] w-full rounded-lg;
+    }
+  }
+}
