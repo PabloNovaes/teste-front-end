@@ -15,8 +15,9 @@ export function Home() {
       <main>
         <section aria-label="main-banner-section" id="main-banner-section">
           <Banner
+            key="main"
             image={{ src: mainBanner, alt: "banner-image" }}
-            gradient={{ direction: "to-l", to: "black", }}
+            gradient={{ direction: "to-r" }}
             title={{
               content: <>
                 Venha conhecer <br /> nossas promoções
@@ -37,11 +38,12 @@ export function Home() {
           <RelatedProducts key="main" showFilters />
           <section aria-label="cards-banner-section" id="cards-banner-section" className="grid xl:grid-cols-2 gap-4 max-w-7xl min-[1700px]:max-w-[1550px] w-full px-6">
             <Banner
+              key="second"
               secondary
               contentPosition="end"
               className="rounded-3xl h-[350px]"
               image={{ src: banner, alt: "banner-image" }}
-              gradient={{ direction: "to-b", to: "black", }}
+              gradient={{ direction: "to-t" }}
               title={{ content: "Parceiros" }}
               description={{
 
@@ -51,11 +53,12 @@ export function Home() {
                 type: "function", label: "Confira", href: "#"
               }} />
             <Banner
+              key="third"
               secondary
               contentPosition="end"
               className="rounded-3xl h-[350px]"
               image={{ src: banner, alt: "banner-image" }}
-              gradient={{ direction: "to-b", to: "black", }}
+              gradient={{ direction: "to-t" }}
               title={{ content: "Parceiros" }}
               description={{
 

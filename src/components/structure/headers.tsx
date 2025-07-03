@@ -41,7 +41,7 @@ const HeaderSlider = () => {
 
     return (
         <div className="w-full h-10">
-            <div className="hidden [950px]:flex justify-center gap-28 h-full text-gray-600">
+            <div className="hidden min-[950px]:flex justify-center gap-28 h-full text-gray-600">
                 {items.map((item, index) => (
                     <div key={index} className="flex items-center gap-2">
                         <img src={item.icon} className="w-5" />
@@ -52,7 +52,7 @@ const HeaderSlider = () => {
                 ))}
             </div>
 
-            <div className="[950px]:hidden flex justify-center items-center h-full w-full text-gray-600 relative overflow-hidden">
+            <div className="min-[950px]:hidden flex justify-center items-center h-full w-full text-gray-600 relative overflow-hidden">
                 <div
                     className="flex transition-transform duration-500 ease-in-out w-full"
                     style={{ transform: `translateX(-${currentIndex * 100}%)` }}
