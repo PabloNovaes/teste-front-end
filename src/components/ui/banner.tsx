@@ -38,9 +38,6 @@ interface BannerProps extends Omit<HTMLAttributes<HTMLDivElement>, "title"> {
         loading?: "lazy" | "eager"
     }
     action?: ActionType
-    gradient?: {
-        direction?: "to-l" | "to-r" | "to-t" | "to-b"
-    }
     height?: "sm" | "md" | "lg" | "xl"
     contentPosition?: "left" | "center" | "right" | "end" | "start"
 }
@@ -67,8 +64,7 @@ export const Banner = forwardRef<HTMLDivElement, BannerProps>(
             description,
             image,
             action,
-            secondary,
-            gradient,
+            secondary = false,
             height = "md",
             contentPosition = "left",
             className,
@@ -76,8 +72,6 @@ export const Banner = forwardRef<HTMLDivElement, BannerProps>(
         },
         ref,
     ) => {
-
-        const gradientClass = `bg-gradient-${gradient?.direction} from-black to-transparent`
 
         return (
             <div
@@ -92,7 +86,7 @@ export const Banner = forwardRef<HTMLDivElement, BannerProps>(
                 aria-label="banner"
                 {...props}
             >
-                <div className={cn("absolute inset-0 w-full h-full", gradientClass)} aria-hidden="true" />
+                <div className={cn("absolute inset-0 w-full h-full", `${!secondary ? "bg-gradient-to-l" : "bg-gradient-to-b"} to-black`)} aria-hidden="true" />
 
                 <div
                     className={cn(
