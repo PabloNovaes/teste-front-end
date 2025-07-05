@@ -115,7 +115,7 @@ const MobileMenu = memo(
                                                 <UserCircleIcon size={40} weight="duotone" className="text-[#222222]/80" />
                                                 <div className="text-[#222222]/80 grid [&_p]:leading-5">
                                                     <p className="text-lg font-medium">Bem-vindo</p>
-                                                    <p className="text-[14px] font-normal">Entre já para</p>
+                                                    <p className="text-[14px] font-normal">Entre já para poder comprar</p>
                                                 </div>
                                             </div>
                                             {navItems.map(({ href, description, ...rest }, index) => (
