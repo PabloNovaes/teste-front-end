@@ -26,7 +26,8 @@ Certifique-se de ter as seguintes ferramentas instaladas:
 
 ---
 
-## 📦 Instalação
+
+## 📦 Instalação e execução
 
 Clone o repositório e instale as dependências com o comando:
 
@@ -35,3 +36,10 @@ npm install
 # ou
 yarn
 ```
+
+em seguida, rode o comando a baixo para executar o projeto
+
+```bash
+npm run dev
+# ou
+yarn
